@@ -18,9 +18,14 @@
 * 讀取文件並依其格式進行處理、排版後，以String存成Dictionary(Key=Title, Value=Content)
 * 以利於建立ListWdget與跳頁功能
 ## Search & Highlight
+* QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
 * 使用`re.finditer`找出String中符合關鍵字的字詞之索引
 * 依照索引於String中插入HTML Tag:`<font style=\"background:yellow;\">` `</font>`
-* QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
+  ‵‵‵          index_list.extend([_.start() for _ in re.finditer(keyword.lower(), curr_content.lower())])
+        for num, index in enumerate(index_list):
+            wordList.insert(index + num*2, "<font style=\"background:yellow;\">")  
+            wordList.insert(index + num*2+ len(keyword)+1, "</font>")      ‵‵‵
+
 
 # Demo
 * 輸入檔案路徑或點選...選擇檔案(可選擇XML與JSON格式)
