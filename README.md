@@ -12,7 +12,7 @@
 * `QLineEdit` : File name與Search欄位皆使用該元件，具有讀寫功能。
 * `QListWidget` : 用以顯示文章列表。
 ### 存取文件
-* 讀取文件並依其格式進行處理、排版後，以String存成Dictionary(Key=Title, Value=Content)
+* 讀取文件並依其格式進行處理、排版後，以`String`存成`Dictionary`(Key=Title, Value=Content)
 * 以利於建立ListWdget與跳頁功能
 * XML : 使用xml.etree.ElementTree讀取，取得文章的Title與Abstract，並仿照PubMed格式排版
 * JSON : 讀取後取得Username、Fullname、Tweet text，仿照twitter格式排版
@@ -25,8 +25,8 @@
   ```
 ### Search & Highlight
 * QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
-* 使用`re.finditer`找出String中符合關鍵字的字詞之索引
-* 依照索引於String中插入HTML Tag:`<font style=\"background:yellow;\">` `</font>`
+* 使用`re.finditer`找出`String`中符合關鍵字的字詞之索引
+* 依照索引於`String`中插入HTML Tag:`<font style=\"background:yellow;\">` `</font>`
 
   ``` 
   index_list.extend([_.start() for _ in re.finditer(keyword.lower(), curr_content.lower())])
