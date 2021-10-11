@@ -53,6 +53,8 @@
 
 [QListWidget Class](https://doc.qt.io/qt-5/qlistwidget.html)
 
+[PyQt - QList Widget](https://www.tutorialspoint.com/pyqt/pyqt_qlistwidget.htm)
+
 [Python3正則匹配re.split，re.finditer及re.findall函式用法詳解](https://www.itread01.com/article/1528700228.html)
 
 [xml.etree.ElementTree — The ElementTree XML API](https://docs.python.org/3/library/xml.etree.elementtree.html)
