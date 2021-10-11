@@ -21,6 +21,7 @@
 * QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
 * 使用`re.finditer`找出String中符合關鍵字的字詞之索引
 * 依照索引於String中插入HTML Tag:`<font style=\"background:yellow;\">` `</font>`
+
   ``` 
   index_list.extend([_.start() for _ in re.finditer(keyword.lower(), curr_content.lower())])
   for num, index in enumerate(index_list):
