@@ -50,8 +50,7 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         wordList = "".join(wordList)
         wordList = wordList.replace("\n","<br>")
-        self.TextBrowser.clear()
-        self.TextBrowser.append(wordList)
+        self.TextBrowser.setText(wordList)
 
     def ItemClicked(self):
         self.item_index = self.DoclistWidget.currentRow()
