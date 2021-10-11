@@ -5,14 +5,14 @@
 * Pyqt5 5.15.4
 # GUI
 1. 使用Qt Designer 設計介面
-2. 使用VScode 的 PYQT Integration extensiont對fulltext.ui進行編譯，生成對應的Ui_fulltext.py
+2. 使用VScode 的 PYQT Integration extension對fulltext.ui進行編譯，生成對應的Ui_fulltext.py
  ![image](https://user-images.githubusercontent.com/91927076/136767797-d928d97d-e9fb-4665-b2d5-e974396aa6e3.png)
 ### Pyqt components
 * `QTextBrowser` : 因其無編輯功能，選擇使用該元件作為顯示文章的欄位。
 * `QLineEdit` : File name與Search欄位皆使用該元件，具有讀寫功能。
-* `QListWidget` : 用以顯示文章列表。
+* `QListWidget` : 用以顯示文章列表，以及跳頁功能。
 ### 存取文件
-* 讀取文件並依其格式進行處理、排版後，以`String`存成`Dictionary`(Key=Title, Value=Content)
+* 讀取文件並依其格式進行處理、排版後，存成`Dictionary`(Key=`String`Title, Value=`String`Content)
 * 以利於建立ListWdget與跳頁功能
 * XML : 使用xml.etree.ElementTree讀取，取得文章的Title與Abstract，並仿照PubMed格式排版
 * JSON : 讀取後取得Username、Fullname、Tweet text，仿照twitter格式排版
