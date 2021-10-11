@@ -9,7 +9,7 @@
 ![image](https://user-images.githubusercontent.com/91927076/136767797-d928d97d-e9fb-4665-b2d5-e974396aa6e3.png)
 # Demo
 * python main.py
-* 輸入檔案路徑或點選...選擇檔案
+* 輸入檔案路徑或點選...選擇檔案(可選擇XML與JSON格式)
 ![image](https://user-images.githubusercontent.com/91927076/136768404-6c3d2310-1543-4c63-8a30-d4cf0a6c5eba.png)
 
 # Reference
