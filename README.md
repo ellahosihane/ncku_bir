@@ -11,7 +11,7 @@
 * `QTextBrowser` : 因其無編輯功能，選擇使用該元件作為顯示文章的欄位。
 * `QLineEdit` : File name與Search欄位皆使用該元件，具有讀寫功能。
 * `QListWidget` : 用以顯示文章列表，以及跳頁功能。
-### 存取文件
+### Read F
 * 讀取文件並依其格式進行處理、排版後，存成`Dictionary`(Key=`String`Title, Value=`String`Content)
 * 以利於建立ListWdget與跳頁功能
 * XML : 使用xml.etree.ElementTree讀取，取得文章的Title與Abstract，並仿照PubMed格式排版
