@@ -31,13 +31,17 @@
 ### Search & Highlight
 * QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
 * 使用`re.finditer`找出`String`中符合關鍵字的字詞之索引
-* 依照索引於`String`中插入HTML Tag:`<font style=\"background:yellow;\">` `</font>`
+* 將內文轉為`List`，依照索引於插入HTML Tag:`<font style=\"background:yellow;\">` `</font>`
+* 使用`str.join()`重組文章
+* 因使用HTML語法，須將換行`\n`替換為`<br>`
 
   ``` 
   index_list.extend([_.start() for _ in re.finditer(keyword.lower(), curr_content.lower())])
   for num, index in enumerate(index_list):
       wordList.insert(index + num*2, "<font style=\"background:yellow;\">")  
-      wordList.insert(index + num*2+ len(keyword)+1, "</font>")     
+      wordList.insert(index + num*2+ len(keyword)+1, "</font>")
+  wordList = "".join(wordList)
+  wordList = wordList.replace("\n","<br>")
   ``` 
 
 # Demo
