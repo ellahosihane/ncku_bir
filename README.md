@@ -17,6 +17,13 @@
 ## 存取文件
 * 讀取文件並依其格式進行處理、排版後，以String存成Dictionary(Key=Title, Value=Content)
 * 以利於建立ListWdget與跳頁功能
+
+  ```
+  #XML
+  self.contentList[doc.find("ArticleTitle").text] = content
+  #JSON
+  self.contentList["twitter"] = content
+  ```
 ## Search & Highlight
 * QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
 * 使用`re.finditer`找出String中符合關鍵字的字詞之索引
