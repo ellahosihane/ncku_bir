@@ -15,12 +15,10 @@
   * 顯示格式仿照PubMed與Twitter，並於左下角顯示當前內容的字元數、字數與句數
   * xml格式預設顯示檔案中首篇文章，點選左方清單可選擇其他文章
   * json格式則是全數顯示
- 
- ![image](https://user-images.githubusercontent.com/91927076/136770259-9a4e7959-a3c5-41d7-a8e7-cee76b357046.png)
- ![image](https://user-images.githubusercontent.com/91927076/136769722-55c9f991-16a2-4241-be2a-4533e4007e0d.png)
+  ![image](https://user-images.githubusercontent.com/91927076/136770259-9a4e7959-a3c5-41d7-a8e7-cee76b357046.png)
+  ![image](https://user-images.githubusercontent.com/91927076/136769722-55c9f991-16a2-4241-be2a-4533e4007e0d.png)
 * Text Search
-
- ![image](https://user-images.githubusercontent.com/91927076/136770708-fded8631-d96f-41d8-af09-925003e1c66d.png)
+![image](https://user-images.githubusercontent.com/91927076/136770708-fded8631-d96f-41d8-af09-925003e1c66d.png)
 
 # Reference
 [VSCode + PYQT5 + QtDesigner 環境搭建和測試](https://www.itread01.com/content/1541809161.html)
