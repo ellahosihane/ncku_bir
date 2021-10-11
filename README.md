@@ -50,3 +50,6 @@
 
 # Reference
 [VSCode + PYQT5 + QtDesigner 環境搭建和測試](https://www.itread01.com/content/1541809161.html)
+[QListWidget Class](https://doc.qt.io/qt-5/qlistwidget.html)
+[Python3正則匹配re.split，re.finditer及re.findall函式用法詳解](https://www.itread01.com/article/1528700228.html)
+[xml.etree.ElementTree — The ElementTree XML API](https://docs.python.org/3/library/xml.etree.elementtree.html)
