@@ -5,7 +5,8 @@
 * Pyqt5 5.15.4
 # GUI
 1. 使用Qt Designer 設計介面
-2. 使用VScode 的 PYQT Integration extensiont對fulltext.ui進行編譯，生成對應的Ui_fulltext.py
+2. 2. 使用VScode 的 PYQT Integration extensiont對fulltext.ui進行編譯，生成對應的Ui_fulltext.py
+![image](https://user-images.githubusercontent.com/91927076/136767797-d928d97d-e9fb-4665-b2d5-e974396aa6e3.png)
 # Demo
 
 # Reference
