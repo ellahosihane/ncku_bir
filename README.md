@@ -17,5 +17,7 @@
   * json格式則是全數顯示
  
 ![image](https://user-images.githubusercontent.com/91927076/136768741-b4d7e395-166b-4a55-88e6-ede803341541.png)
+![image](https://user-images.githubusercontent.com/91927076/136769722-55c9f991-16a2-4241-be2a-4533e4007e0d.png)
+
 # Reference
 [VSCode + PYQT5 + QtDesigner 環境搭建和測試](https://www.itread01.com/content/1541809161.html)
