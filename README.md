@@ -11,6 +11,10 @@
 * python main.py
 * 輸入檔案路徑或點選...選擇檔案(可選擇XML與JSON格式)
 ![image](https://user-images.githubusercontent.com/91927076/136768404-6c3d2310-1543-4c63-8a30-d4cf0a6c5eba.png)
-
+* 點選Load讀取文件
+  * 顯示格式仿照PubMed與Twitter
+  * xml格式預設顯示檔案中首篇文章，點選左方清單可選擇其他文章
+  * json格式則是全數顯示
+![image](https://user-images.githubusercontent.com/91927076/136768741-b4d7e395-166b-4a55-88e6-ede803341541.png)
 # Reference
 [VSCode + PYQT5 + QtDesigner 環境搭建和測試](https://www.itread01.com/content/1541809161.html)
