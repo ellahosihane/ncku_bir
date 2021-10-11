@@ -8,11 +8,11 @@
 2. 使用VScode 的 PYQT Integration extensiont對fulltext.ui進行編譯，生成對應的Ui_fulltext.py
  ![image](https://user-images.githubusercontent.com/91927076/136767797-d928d97d-e9fb-4665-b2d5-e974396aa6e3.png)
 ## Pyqt components
-* QTextBrowser:
-因其無編輯功能，選擇使用該元件作為顯示文章的欄位。
-* QLineEdit:
+* QTextBrowser :
+ 因其無編輯功能，選擇使用該元件作為顯示文章的欄位。
+* QLineEdit :
 File name與Search欄位皆使用該元件，具有讀寫功能。
-* QListWidget:
+* QListWidget :
 用以顯示文章列表。
 ## 存取文件
 * 讀取文件並依其格式進行處理、排版後，以String存成Dictionary(Key=Title, Value=Content)
