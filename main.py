@@ -58,7 +58,7 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.TextBrowser.clear()
         self.TextBrowser.append(self.contentList[self.itemList[self.item_index]])
         numList = self.Statistics[self.itemList[self.item_index]]
-        self.Cal.setText('number of characters:'+numList[0]+'\nnumber of words:'+numList[1]+'\nnumber of sentences:'+numList[2])
+        self.Cal.setText('Number of characters:'+numList[0]+'\nNumber of words:'+numList[1]+'\nNumber of sentences:'+numList[2])
         self.FindClicked()
 
     def Read(self):
@@ -107,7 +107,7 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 num_sentences -= 1
             content = content.replace("<", "&lt;")
             content = content.replace(">", "&gt;")
-            self.Statistics["twitter"] = [num_char, num_word, num_sentences]
+            self.Statistics["twitter"] = [num_char, num_word, str(num_sentences)]
             self.contentList["twitter"] = content
 
 if __name__ == '__main__':
