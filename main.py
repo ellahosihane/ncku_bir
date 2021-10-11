@@ -9,6 +9,11 @@ from PyQt5.QtWidgets import QFileDialog, QMessageBox, QDockWidget, QListWidget, 
 from PyQt5.QtGui import *
 from Ui_fulltext import Ui_MainWindow  
 
+class SubWindow(QWidget):
+     def __init__(self):
+         super(SubWindow, self).__init__()
+         self.resize(400, 300)
+
 class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def __init__(self):
@@ -30,11 +35,14 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.Filepath.setText(self.filename[0])
 
     def ParseClicked(self):
-        self.Read()
-        self.itemList = [_ for _ in self.contentList.keys()]
-        self.DoclistWidget.addItems(self.itemList)
-        self.DoclistWidget.setCurrentRow(0)
-        self.ItemClicked()
+        if self.filename[0].endswith(".xml") or self.filename[0].endswith(".json"): 
+            self.Read()
+            self.itemList = [_ for _ in self.contentList.keys()]
+            self.DoclistWidget.addItems(self.itemList)
+            self.DoclistWidget.setCurrentRow(0)
+            self.ItemClicked()
+        else:
+            print('The file format or file extension is not valid.')
         # self.TextBrowser.append(self.contentList[self.itemList[0]])
 
     def FindClicked(self):
@@ -42,7 +50,7 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
         curr_content = self.contentList[self.itemList[self.item_index]]
         keyword = self.KeyWord.text()
         index_list = []
-        if keyword is not "":
+        if keyword != "":
             index_list.extend([_.start() for _ in re.finditer(keyword.lower(), curr_content.lower())])
         for num, index in enumerate(index_list):
             wordList.insert(index + num*2, "<font style=\"background:yellow;\">")  
@@ -54,8 +62,7 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def ItemClicked(self):
         self.item_index = self.DoclistWidget.currentRow()
-        self.TextBrowser.clear()
-        self.TextBrowser.append(self.contentList[self.itemList[self.item_index]])
+        self.TextBrowser.setText(self.contentList[self.itemList[self.item_index]])
         numList = self.Statistics[self.itemList[self.item_index]]
         self.Cal.setText('Number of characters:'+numList[0]+'\nNumber of words:'+numList[1]+'\nNumber of sentences:'+numList[2])
         self.FindClicked()
@@ -92,7 +99,7 @@ class mywindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 content = content.replace(">", "&gt;")
                 self.Statistics[doc.find("ArticleTitle").text] = [num_char, num_word, str(num_sentences)]
                 self.contentList[doc.find("ArticleTitle").text] = content
-        else:
+        elif self.filename[0].endswith(".json"):
             content = []
             with open(f'{self.filename[0]}', 'rb')as fjson:
                 twitter = json.load(fjson)
