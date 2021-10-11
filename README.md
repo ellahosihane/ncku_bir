@@ -23,6 +23,11 @@
   #JSON
   self.contentList["twitter"] = content
   ```
+* 因QTextBrowser支援HTML語法，因此部分符號需做修改
+  ```
+  content.replace("<", "&lt;")
+  content.replace(">", "&gt;")
+  ```
 ### Search & Highlight
 * QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
 * 使用`re.finditer`找出`String`中符合關鍵字的字詞之索引
