@@ -14,6 +14,9 @@
   File name與Search欄位皆使用該元件，具有讀寫功能。
 * QListWidget
   用以顯示文章列表。
+## 存取文件
+* 讀取文件並依其格式進行處理、排版後，以String存成Dictionary(Key=Title, Value=Content)
+* 以利於建立ListWdget與跳頁功能
 
 # Demo
 * 輸入檔案路徑或點選...選擇檔案(可選擇XML與JSON格式)
