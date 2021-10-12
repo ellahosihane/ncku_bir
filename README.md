@@ -14,7 +14,7 @@
 ### Read File
 * 讀取文件並依其格式進行處理、排版後，存成`Dictionary`(Key=`String`Title, Value=`String`Content)
 * 以利於建立ListWdget與跳頁功能
-* XML : 使用xml.etree.ElementTree讀取，取得文章的Title與Abstract，並仿照PubMed格式排版
+* XML : 使用`xml.etree.ElementTree`讀取，取得文章的Title與Abstract，並仿照PubMed格式排版
 * JSON : 讀取後取得Username、Fullname、Tweet text，仿照twitter格式排版
 
   ```
