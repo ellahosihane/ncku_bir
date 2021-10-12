@@ -28,6 +28,15 @@
   content.replace("<", "&lt;")
   content.replace(">", "&gt;")
   ```
+### Statistics
+* Number of characters: `String`長度
+* Number of words: 以空格將`String`分割所得到之`List`的長度
+* Number of sentences: 以`.`將`String`分割所得到之`List`的長度
+``` 
+num_char = str(len(content))
+num_word = str(len(content.split(" ")))
+num_sentences = len(content.split('.'))
+``` 
 ### Search & Highlight
 * QTextBrowser支援HTML語法顯示，使用HTML實作Highlight功能
 * 使用`re.finditer`找出`String`中符合關鍵字的字詞之索引
